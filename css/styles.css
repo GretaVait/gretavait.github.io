@@ -159,17 +159,21 @@ main {
     margin-top: 30px;
 }
 
-.about div {
+.card {
     margin-top: 10px;
     padding: 0 10%;
     text-align: justify;
+}
+
+.card p {
+    margin-bottom: 20px;
 }
 
 .outline {
     background-color: #FFEB3B;
 }
 
-.about button {
+.card a {
     font-family: 'Poppins', sans-serif;
     width: 140px;
     height: 44px;
@@ -178,6 +182,7 @@ main {
     font-weight: 600;
     font-size: 14px;
     margin-top: 20px;
+    padding: 10px 15px;
 }
 
 /* Contact */
@@ -407,31 +412,30 @@ footer p {
     }
 
     .about {
-        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 50px 0 0 0;
     }
 
     .about img {
-        position: absolute;
-        left: 55%;
-        top: -55%;
         width: 300px;
         padding: 0;
         margin: 0;
     }
 
-    .about div {
+    .card {
         background-color: #F4F4F4;
-        width: 80%;
-        padding: 120px 100px 100px 100px;
-        margin: 300px auto 0 auto;
+        padding: 50px;
+        margin: 50px 10%;
     }
 
-    .about p {
+    .card p {
         padding: 0;
         margin: 0 0 30px 0;
     }
 
-    .about button {
+    .card a {
         width: 160px;
         height: 54px;
         cursor: pointer;
@@ -439,10 +443,11 @@ footer p {
         background-color: transparent;
         font-size: 16px;
         transition: all 0.3s ease-out 0s;
+        padding: 15px 20px;
         margin: 0;
     }
 
-    .about button:hover {
+    .card a:hover {
         background-color: #FFEB3B;
     }
 
@@ -549,15 +554,18 @@ footer p {
         width: 25%;
     }
 
-    .about img {
-        width: 300px;
-        left: 68%;
-        top: -35%;
+    .about {
+        flex-direction: row;
     }
 
-    .about div {
-        padding: 100px 300px 100px 100px;
-        margin: 200px auto 0 auto;
+    .about img {
+        width: 300px;
+        margin-left: 10%;
+    }
+
+    .card {
+        padding: 100px;
+        margin: 0 10%;
     }
 
     .work {
@@ -590,12 +598,5 @@ footer p {
     .work-info > *,
     .overview > * {
         margin: 30px 0;
-    }
-}
-
-@media (min-width: 1200px) {
-    .about img {
-        left: 77%;
-        top: -40%;
     }
 }
