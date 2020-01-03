@@ -1,29 +1,17 @@
-const toggleMenu = document.querySelector('.toggle-menu img');
-const nav = document.querySelector('nav');
-const modal = document.querySelector('.modal');
-const projectList = document.querySelector('.project-list');
-const closeBtn = document.querySelector('.close');
-const h2 = document.querySelector('.work-info h2');
-const span = document.querySelector('.work-info span');
-const a = document.querySelector('.work-info a');
-const p = document.querySelector('.overview p');
-
-toggleMenu.addEventListener('click', () => {
-    nav.classList.toggle('nav-active');
-});
-
-projectList.addEventListener('click', (event) => {
-    if (event.target.parentElement.nodeName === 'LI') {
-        modal.classList.toggle('modal-open');
-        const id = event.target.parentElement.id;
-        h2.innerHTML = projects[id].name;
-        span.innerHTML = projects[id].language;
-        p.innerHTML = projects[id].overview;
-        a.href = projects[id].website;
+const btnToTop = document.querySelector('.to-top');
+document.addEventListener('scroll', ()=>{
+    if (window.pageYOffset >= 200) {
+        btnToTop.style.transform = 'translate(0, 0)';
+    } else if (window.pageYOffset < 200) {
+        btnToTop.style.transform = 'translate(0, 150%)';
     }
 });
 
-closeBtn.addEventListener('click', () => {
-    modal.classList.remove('modal-open');
+btnToTop.addEventListener('click', ()=>{
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
 });
 
+$(document).ready(function(){
+    $('.slider').slick();
+});
