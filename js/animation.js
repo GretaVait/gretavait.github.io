@@ -1,4 +1,3 @@
-const introImg = document.querySelector('.intro__img');
 
 const introContainer = document.querySelector('.intro__container');
 
@@ -6,7 +5,6 @@ const redFlash = document.querySelectorAll('.red-flash');
 
 window.addEventListener('load', ()=>{
     setTimeout(()=>{
-        introImg.style.transform = 'scale(1)';
         redFlash[0].style.animationName = 'red-flash';
     }, 6800);
 });

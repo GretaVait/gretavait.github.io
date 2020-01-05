@@ -185,12 +185,13 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 5px 20px;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 2;
+    background-color: var(--neutral-white);
 }
 
 nav {
@@ -228,6 +229,12 @@ nav.active {
 .menu {
     position: relative;
     z-index: 5;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .logo {
@@ -239,15 +246,14 @@ nav.active {
 .line {
     width: 20px;
     height: 1px;
-    margin: 3px 0;
+    margin: 2px 0;
     background: var(--neutral-black);
     transition: all 0.2s ease-out;
 }
 
 .line.active {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 50%;
 }
 
 .first {
@@ -345,7 +351,6 @@ nav.active {
     align-items: flex-start;
     justify-content: space-evenly;
     background-color: var(--light-grey);
-    height: 100vh;
     padding: 20px;
 }
 
@@ -467,6 +472,7 @@ form textarea {
 .alert {
     float: none;
     display: flex;
+    align-items: flex-start;
     opacity: 0;
     margin: 0 0 15px 0;
     transition: all 0.5s ease-out;
@@ -492,14 +498,22 @@ form textarea {
 
     nav {
         display: block;
+        transform: none;
+        background-color: transparent;
+        position: static;
+        width: auto;
+        height: auto;
     }
 
     .nav__item {
         display: inline;
         margin: 0 20px 0 0;
+        font-size: 1em;
     }
 
     .nav__link {
+        font-weight: 400;
+        color: var(--neutral-black);
         transition: all 0.2s ease-in-out;
     }
 
@@ -515,11 +529,11 @@ form textarea {
         font-size: 2.1875em;
     }
 
-    .intro {
+    /* .intro {
         flex-direction: row;
         align-items: center;
         justify-content: space-evenly;
-    }
+    } */
 
     .intro .display1 {
         margin: 0 0 30px 0;
@@ -533,10 +547,6 @@ form textarea {
         width: 250px;
         order: 2;
         margin: 0;
-    }
-
-    .intro__container {
-        width: 50%;
     }
 
     .typewriter {
@@ -606,6 +616,10 @@ form textarea {
 }
 
 @media (min-width: 860px) {
+    .intro__container {
+        width: 50%;
+    }
+
     .about {
         align-items: center;
     }
