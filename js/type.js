@@ -1,4 +1,4 @@
-const words = ["I build websites", "I create wireframes"];
+const words = ["I build websites", "I create wireframes", "I love responsive design"];
 let wordIndex = 0;
 let timer;
 

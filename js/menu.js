@@ -16,5 +16,11 @@ menu.addEventListener('click', ()=>{
 for (let i = 0; i < navLink.length; i++) {
     navLink[i].addEventListener('click', ()=>{
         nav.classList.remove('active');
+        lines[0].classList.remove('first');
+        lines[1].classList.remove('second');
+        lines[2].classList.remove('third');
+        for (let j = 0; j < lines.length; j++) {
+            lines[j].classList.remove('active');
+        }
     });
 }

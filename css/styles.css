@@ -191,6 +191,7 @@ header {
     left: 0;
     width: 100%;
     z-index: 2;
+    box-shadow: 0 0 5px var(--neutral-black);
     background-color: var(--neutral-white);
 }
 
@@ -234,7 +235,7 @@ nav.active {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
 }
 
 .logo {
@@ -278,6 +279,10 @@ nav.active {
     align-items: flex-start;
 }
 
+.blob {
+    display: none;
+}
+
 .intro__img {
     width: 70%;
     margin: 0 auto;
@@ -306,7 +311,7 @@ nav.active {
     align-items: center;
     height: 100vh;
     background-color: var(--light-pink);
-    padding: 20px;
+    padding: 30px;
     position: relative;
 }
 
@@ -325,7 +330,7 @@ nav.active {
 
 /* Carousel */
 .slider {
-    width: 90%;
+    width: 100%;
     position: relative;
 }
 
@@ -342,6 +347,18 @@ nav.active {
 
 .slick-prev:before, .slick-next:before {
     font-size: 30px;
+}
+
+.slick-prev, .slick-next {
+    top: 65%;
+}
+
+.slick-prev {
+    left: 0;
+}
+
+.slick-next {
+    right: 0;
 }
 
 /* About */
@@ -529,11 +546,30 @@ form textarea {
         font-size: 2.1875em;
     }
 
-    /* .intro {
+    .intro {
         flex-direction: row;
         align-items: center;
         justify-content: space-evenly;
-    } */
+    }
+
+    .intro__container {
+        width: 50%;
+    }
+
+    .blob {
+        display: block;
+        fill: var(--bright-orange);
+        width: 30%;
+        animation: move 7s ease-in-out infinite;
+        transform-origin: 50% 50%;
+    }
+      
+    @keyframes move {
+        0%   { transform:  translate(0, 0) }
+        30% { transform: translate(0, 55px) }
+        70% { transform: translate(0, 75px) }
+        100% { transform: translate(0, 0) }
+    }
 
     .intro .display1 {
         margin: 0 0 30px 0;
@@ -566,11 +602,11 @@ form textarea {
     }
 
     .about {
-        flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
         padding: 50px 80px;
         line-height: 2;
+        height: 100vh;
     }
 
     .my-skills {
@@ -622,6 +658,7 @@ form textarea {
 
     .about {
         align-items: center;
+        justify-content: center;
     }
 
     .about__container {
@@ -649,6 +686,11 @@ form textarea {
     .write-me {
         margin: 0;
         width: 45%;
+    }
+
+    .contact {
+        height: 100vh;
+        align-items: flex-start;
     }
 
     .contact__container {
@@ -685,6 +727,10 @@ form textarea {
 
     .intro {
         padding: 50px 100px;
+    }
+
+    .intro__container {
+        width: 70%;
     }
 
     .intro__img {

@@ -6,7 +6,7 @@ const redFlash = document.querySelectorAll('.red-flash');
 window.addEventListener('load', ()=>{
     setTimeout(()=>{
         redFlash[0].style.animationName = 'red-flash';
-    }, 6800);
+    }, 2000);
 });
 
 function fadeIn(section, offset) {
