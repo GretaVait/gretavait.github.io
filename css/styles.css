@@ -275,12 +275,7 @@ nav.active {
     padding: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     align-items: flex-start;
-}
-
-.blob {
-    display: none;
 }
 
 .intro__img {
@@ -351,6 +346,7 @@ nav.active {
 
 .slick-prev, .slick-next {
     top: 65%;
+    z-index: 20;
 }
 
 .slick-prev {
@@ -549,19 +545,6 @@ form textarea {
     .intro {
         flex-direction: row;
         align-items: center;
-        justify-content: space-evenly;
-    }
-
-    .intro__container {
-        width: 50%;
-    }
-
-    .blob {
-        display: block;
-        fill: var(--bright-orange);
-        width: 30%;
-        animation: move 7s ease-in-out infinite;
-        transform-origin: 50% 50%;
     }
       
     @keyframes move {
@@ -652,10 +635,6 @@ form textarea {
 }
 
 @media (min-width: 860px) {
-    .intro__container {
-        width: 50%;
-    }
-
     .about {
         align-items: center;
         justify-content: center;
@@ -727,10 +706,6 @@ form textarea {
 
     .intro {
         padding: 50px 100px;
-    }
-
-    .intro__container {
-        width: 70%;
     }
 
     .intro__img {
