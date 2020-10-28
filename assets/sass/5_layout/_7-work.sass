@@ -33,6 +33,23 @@
     transition: transform .4s ease-out
     will-change: transform
 
+    &--coming-soon
+      cursor: auto
+
+      &::after
+        content: 'Coming Soon!'
+        display: flex
+        align-items: center
+        justify-content: center
+        position: absolute
+        font-weight: $bold
+        top: 20px
+        right: 20px
+        width: 200px
+        height: 70px
+        background-color: transparentize($red, .5)
+        color: $white
+
     @media (hover: hover)
       &:hover
         transform: scale3d(.9, .9, .9)
