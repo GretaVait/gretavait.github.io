@@ -50,6 +50,11 @@
         background-color: transparentize($red, .5)
         color: $white
 
+        @media screen and ( max-width: 767px )
+          width: 150px
+          height: 50px
+          font-size: .875em
+
     @media (hover: hover)
       &:hover
         transform: scale3d(.9, .9, .9)
