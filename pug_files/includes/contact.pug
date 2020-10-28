@@ -1,0 +1,40 @@
+section#contact.section--space
+  div.container
+    div.row
+      div.col
+        h1.section-title Let's keep in touch
+          span.red-flash
+    div.row.justify-content-md-between
+      .col-md-2
+        div.contact__links
+          h2 Follow me
+          ul
+            li 
+              a(href="https://github.com/GretaVait" target="_blank") 
+                img(src="assets/img/icons/github.svg", alt="Github Icon")
+                span Github
+            li
+              a(href="https://www.linkedin.com/in/gvaitiekunaite/" target="_blank") 
+                img(src="assets/img/icons/linkedin.svg", alt="Linkedin Icon")
+                span Linkedin
+            li
+              a(href="https://www.credential.net/283748cf-a8d3-43a3-90cf-810bd4915183" target="_blank") 
+                img(src="assets/img/icons/certificate.svg", alt="Certificate Icon")
+                span Certificate
+      .col-xl-5.col-md-7
+        #form
+          h2 Write me
+          form
+            .form__box
+              input(type="text" name="name")
+              span.line
+              label(for="name") Name
+            .form__box
+              input(type="text" name="email")
+              span.line
+              label(for="email") Email Address
+            .form__box
+              textarea(name="message")
+              span.line
+              label(for="message") Message
+            button(class="btn btn--primary") Send

@@ -1,0 +1,21 @@
+@mixin underline()
+  margin-bottom: 30px
+  position: relative
+  padding-bottom: 6px
+  &::after
+    content: ''
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 45px
+    height: 3px
+    background-color: $red
+
+@mixin textFill()
+  background-clip: text
+  -webkit-background-clip: text
+  -webkit-text-fill-color: transparent
+  background-image: linear-gradient(to right, $black, $black 50%, transparent 50%)
+  background-size: 200% 100%
+  background-position: 100%
+  transition: all 1.2s $transition-reveal

@@ -1,0 +1,81 @@
+#work
+  .container
+    position: relative
+
+  .row
+    [class*=col-]
+      @media screen and ( max-width: 767px )
+        margin-bottom: 60px !important
+      
+      &:nth-child(odd)
+        padding-right: 40px
+        margin-bottom: 80px
+
+        @media screen and ( max-width: 767px )
+          padding-right: 15px
+          margin-bottom: 0px
+
+      &:nth-child(even)
+        padding-left: 40px
+        margin-top: 80px
+
+        @media screen and ( max-width: 767px )
+          padding-left: 15px
+          margin-top: 0px
+
+  .section-title
+    margin-bottom: 60px
+
+  .work__item
+    display: block
+    position: relative
+    padding-top: 100%
+    transition: transform .4s ease-out
+    will-change: transform
+
+    @media (hover: hover)
+      &:hover
+        transform: scale3d(.9, .9, .9)
+        // .work__item__title
+        //   opacity: 0
+
+        // .work__item__img
+        //   opacity: 1
+        //   transform: scale3d(.9, .9, 1)
+    
+    &__logo
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      width: 40%
+
+      img
+        width: 100%
+
+    &__title
+      position: absolute
+      bottom: 30px
+      left: 30px
+      opacity: 1
+      transition: opacity .4s ease-out
+      will-change: opacity
+
+      .counter
+        font-size: 16px
+        color: $red
+        position: absolute
+        top: 0
+
+    &__img
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      background-repeat: no-repeat
+      background-size: cover
+      opacity: 0
+      transform: scale3d(1.1, 1.1, 1)
+      transition: opacity .2s ease-out, transform 1s cubic-bezier(.215,.61,.355,1)
+      will-change: opacity, transform

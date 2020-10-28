@@ -1,0 +1,19 @@
+#intro
+  height: 100vh
+  display: flex
+  align-items: center
+
+  .h2--bigger
+    margin: 60px 0
+    background-clip: text
+    @include textFill
+    &.revealed
+      background-position: 0%
+
+    em
+      font-family: $font-secondary
+
+  .typewriting
+    display: inline
+    position: relative
+    border-right: 6px solid $red
