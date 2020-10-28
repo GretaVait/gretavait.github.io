@@ -116,6 +116,9 @@ header
   transition: transform .4s ease-out, opacity .2s ease-out
   will-change: transform, opacity
 
+  @media screen and ( max-width: 767px )
+    display: block
+
   &.open
     transform: translate(0, 0)
     opacity: 1
@@ -126,8 +129,8 @@ header
     padding: 10px 0
     color: $red
 
-  @media screen and ( max-width: 767px )
-    display: block
+    @media screen and ( max-width: 425px )
+      font-size: 2em
   
   ul
     height: 100%
