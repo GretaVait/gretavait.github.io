@@ -95,30 +95,30 @@ const workSlider = new Swiper('.work__slider', {
 }
 
 //---- INPUTS FOCUS OUT STATE ----//
-{
-  const inputs = document.querySelectorAll('input');
-  const textarea = document.querySelector('textarea');
-  const label = document.querySelectorAll('label');
+// {
+//   const inputs = document.querySelectorAll('input');
+//   const textarea = document.querySelector('textarea');
+//   const label = document.querySelectorAll('label');
 
-  inputs.forEach(function(input, index) {
-    input.addEventListener('focusout', (e) => {
-      if (e.target.value != '') {
-        label[index].classList.add('active');
-      } else {
-        label[index].classList.remove('active');
-      }
-    });
-  });
+//   inputs.forEach(function(input, index) {
+//     input.addEventListener('focusout', (e) => {
+//       if (e.target.value != '') {
+//         label[index].classList.add('active');
+//       } else {
+//         label[index].classList.remove('active');
+//       }
+//     });
+//   });
 
-  textarea.addEventListener('focusout', (e) => {
-    console.log(e.target.value);
-    if (e.target.value != '') {
-      label[2].classList.add('active');
-    } else {
-      label[2].classList.remove('active');
-    }
-  });
-}
+//   textarea.addEventListener('focusout', (e) => {
+//     console.log(e.target.value);
+//     if (e.target.value != '') {
+//       label[2].classList.add('active');
+//     } else {
+//       label[2].classList.remove('active');
+//     }
+//   });
+// }
 
 //---- ANIMATIONS ----//
 const scrollController = new ScrollMagic.Controller();
