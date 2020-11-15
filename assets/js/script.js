@@ -47,6 +47,8 @@ const workSlider = new Swiper('.work__slider', {
     };
     loopDeleting();
   };
+
+  typingEffect();
 }
 
 // {
@@ -54,8 +56,6 @@ const workSlider = new Swiper('.work__slider', {
 
 //   Scrollbar.init(document.querySelector('#my-scrollbar'));
 // }
-
-//typingEffect();
 
 //---- NAVIGATION ----//
 {
