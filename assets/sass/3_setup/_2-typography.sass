@@ -3,34 +3,34 @@ body
   font-family: $font-primary
 
 .h1
-  font-size: 3.7em
+  font-size: 3.7rem
   font-weight: $medium
 
 h1
   @extend .h1
 
   @media screen and ( max-width: 991px )
-    font-size: 3em
+    font-size: 3rem
 
   @media screen and ( max-width: 450px )
-    font-size: 2.7em
+    font-size: 2.7rem
     
   &.h1--mono
     font-family: $font-secondary
 h2
-  font-size: 1.3em
+  font-size: 1.3rem
 
   @media screen and ( max-width: 991px )
-    font-size: 1.2em
+    font-size: 1.2rem
 
   &.h2--bigger
     @extend .h1
 
     @media screen and ( max-width: 991px )
-      font-size: 3em !important
+      font-size: 3rem !important
 
     @media screen and ( max-width: 450px )
-      font-size: 2.7em !important
+      font-size: 2.7rem !important
 
 h3
   &.typewriting
@@ -40,3 +40,6 @@ h3
   position: relative
   color: $red
   display: inline-block
+
+p
+  line-height: 2rem
