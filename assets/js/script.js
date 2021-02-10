@@ -8,7 +8,7 @@ const workSlider = new Swiper('.work__slider', {
 
 //---- TYPEWRITING EFFECT ----//
 {
-  const words = ["I build websites", "I create wireframes", "I love responsive design"];
+  const words = ["I build websites & apps", "I create wireframes", "I love responsive design", "I create prototypes"];
   let wordIndex = 0;
   let timer;
   
