@@ -3,11 +3,23 @@ section#work
     .row
       .col
         .work__toggle
-          p.work__toggle__switch.work__toggle__switch--active Case Studies
-          p.work__toggle__switch Illustrations
-          p.work__toggle__switch Development
-          span.active-line
-    .row.work-hidden
+          a(href="#tab1").work__toggle__switch.js-filter-btn.active Case Studies
+          a(href="#tab2").work__toggle__switch.js-filter-btn Illustrations
+          a(href="#tab3").work__toggle__switch.js-filter-btn Development
+          span.active-line.js-active-line
+    .row.work-row.active#tab1
+      .col-md-6
+        a(href="https://sos-vaikukaimai.lt/" target="_blank" style="background-color: #F0F8FC").work__item
+          .work__item__logo
+            img(src="assets/img/work/logo/sos-vaiku-kaimai.svg", alt="Sos vaikų kaimai logo")
+
+    .row.work-row#tab2
+      .col-md-6
+        a(href="https://rinvest.lt/" target="_blank" style="background-color: #FCF2FF").work__item
+          .work__item__logo
+            img(src="assets/img/work/logo/rinvest.svg", alt="Rinvest logo")
+
+    .row.work-row#tab3
       .col-md-6
         a(href="https://sos-vaikukaimai.lt/" target="_blank" style="background-color: #F0F8FC").work__item
           .work__item__logo
@@ -32,8 +44,3 @@ section#work
         a(href="https://reactjs-app-expensify.herokuapp.com/" target="_blank" style="background-color: #EDFCF6").work__item
           .work__item__logo
             img(src="assets/img/work/logo/expensify.svg", alt="Expensify logo")
-    .row
-      .col-md-6
-        a(href="https://sos-vaikukaimai.lt/" target="_blank" style="background-color: #F0F8FC").work__item
-          .work__item__logo
-            img(src="assets/img/work/logo/sos-vaiku-kaimai.svg", alt="Sos vaikų kaimai logo")

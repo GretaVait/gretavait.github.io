@@ -24,8 +24,10 @@
         @media screen and ( max-width: 767px )
           padding-left: 15px
           margin-top: 0px
-    &.work-hidden
+    &.work-row
       display: none
+      &.active
+        display: block
 
   .work__toggle
     position: relative
@@ -36,10 +38,10 @@
       margin-bottom: 3.2rem
 
     &__switch
-      font-size: 1.4rem
+      font-size: 1.2rem
       color: transparentize($black, .5)
       cursor: pointer
-      min-width: 11.6rem
+      min-width: 9rem
       padding-bottom: .8rem
       margin-bottom: 0
       text-align: center
@@ -47,15 +49,22 @@
       transition: color .3s ease-out
       will-change: color
 
+      @media screen and ( min-width: 375px )
+        font-size: 1.4rem
+        min-width: 11.6rem
+
       @media screen and ( min-width: 576px )
         font-size: 1.6rem
         min-width: 14rem
+
+      @media screen and ( min-width: 992px )
+        min-width: 16rem
 
       @media (hover: hover)
         &:hover
           color: transparentize($black, 0)
 
-      &--active
+      &.active
         color: transparentize($black, 0)
 
     .active-line
@@ -64,9 +73,18 @@
       left: 0
       background-color: $yellow
       height: .4rem
-      width: 11.6rem
+      width: 9rem
+      transition: all .3s ease-out
+      will-change: transform
+
+      @media screen and ( min-width: 375px )
+        width: 11.6rem
+
       @media screen and ( min-width: 576px )
         width: 14rem
+      
+      @media screen and ( min-width: 992px )
+        width: 16rem
 
   .work__item
     display: block
