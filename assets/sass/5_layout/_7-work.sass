@@ -25,25 +25,46 @@
     &.work-hidden
       display: none
 
-  .section-title
-    margin-bottom: 60px
-
   .work__toggle
+    position: relative
+    display: flex
+    // justify-content: center
+    margin-bottom: 2.4rem
+    @media screen and ( min-width: 576px )
+      margin-bottom: 3.2rem
+
     &__switch
-      opacity: .5
+      font-size: 1.4rem
+      color: transparentize($black, .5)
       cursor: pointer
-      transition: opacity .3s ease-out
-      will-change: opacity
+      min-width: 11.6rem
+      padding-bottom: .8rem
+      margin-bottom: 0
+      text-align: center
+      border-bottom: .4rem solid $grey
+      transition: color .3s ease-out
+      will-change: color
+
+      @media screen and ( min-width: 576px )
+        font-size: 1.6rem
+        min-width: 14rem
+
       @media (hover: hover)
         &:hover
-          opacity: 1
-
-      &:last-child
-        margin-left: 24px
+          color: transparentize($black, 0)
 
       &--active
-        text-decoration: underline
-        opacity: 1
+        color: transparentize($black, 0)
+
+    .active-line
+      position: absolute
+      bottom: 0
+      left: 0
+      background-color: $yellow
+      height: .4rem
+      width: 11.6rem
+      @media screen and ( min-width: 576px )
+        width: 14rem
 
   .work__item
     display: block
@@ -77,12 +98,6 @@
     @media (hover: hover)
       &:hover
         transform: scale3d(.9, .9, .9)
-        // .work__item__title
-        //   opacity: 0
-
-        // .work__item__img
-        //   opacity: 1
-        //   transform: scale3d(.9, .9, 1)
     
     &__logo
       position: absolute
@@ -93,30 +108,3 @@
 
       img
         width: 100%
-
-    &__title
-      position: absolute
-      bottom: 30px
-      left: 30px
-      opacity: 1
-      transition: opacity .4s ease-out
-      will-change: opacity
-
-      .counter
-        font-size: 16px
-        color: red
-        position: absolute
-        top: 0
-
-    &__img
-      position: absolute
-      top: 0
-      left: 0
-      width: 100%
-      height: 100%
-      background-repeat: no-repeat
-      background-size: cover
-      opacity: 0
-      transform: scale3d(1.1, 1.1, 1)
-      transition: opacity .2s ease-out, transform 1s cubic-bezier(.215,.61,.355,1)
-      will-change: opacity, transform
