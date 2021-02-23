@@ -1,23 +1,36 @@
-section#contact.section--space
+section#contact
   div.container
     div.row
       div.col
-        h1.section-title Contact
+        h1.section-title.js-contact-title Contact
     div.row.justify-content-md-between
       .col-md-4
         ul.contact__list
-          li 
+          li.js-contact-item
+            a(href="https://github.com/GretaVait" target="_blank")
+              .contact__icon
+                img(src="assets/img/icons/behance.svg", alt="Behance Icon")
+              span Behance
+          li.js-contact-item
+            a(href="https://github.com/GretaVait" target="_blank")
+              .contact__icon
+                img(src="assets/img/icons/dribbble.svg", alt="Github Icon")
+              span Dribbble
+          li.js-contact-item
             a(href="https://github.com/GretaVait" target="_blank") 
-              img(src="assets/img/icons/github.svg", alt="Github Icon")
+              .contact__icon
+                img(src="assets/img/icons/github.svg", alt="Github Icon")
               span Github
-          li
-            a(href="https://www.linkedin.com/in/gvaitiekunaite/" target="_blank") 
-              img(src="assets/img/icons/linkedin.svg", alt="Linkedin Icon")
+          li.js-contact-item
+            a(href="https://www.linkedin.com/in/gvaitiekunaite/" target="_blank")
+              .contact__icon
+                img(src="assets/img/icons/linkedin.svg", alt="Linkedin Icon")
               span Linkedin
-          li
-            a(href="https://www.credential.net/283748cf-a8d3-43a3-90cf-810bd4915183" target="_blank") 
-              img(src="assets/img/icons/certificate.svg", alt="Certificate Icon")
-              span Certificate
+          //- li.js-contact-item
+          //-   a(href="https://www.credential.net/283748cf-a8d3-43a3-90cf-810bd4915183" target="_blank") 
+          //-     img(src="assets/img/icons/certificate.svg", alt="Certificate Icon")
+          //-     span Certificate
       .col-xl-5.col-md-7
-        p.contact__content If you are interested in working with me or want to propose a job offer I am always open to any suggestions. I am also looking for internship in UX / UI Design to gain hands-on experience.
-        a.btn.btn--primary(href="mailto:gretavait@gmail.com") Email me!
+        .js-contact-content
+          p.contact__content If you are interested in working with me or want to propose a job offer I am always open to any suggestions. I am also looking for internship in UX / UI Design to gain hands-on experience.
+          a.btn.btn--primary(href="mailto:gretavait@gmail.com") Email me!

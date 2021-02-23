@@ -3,31 +3,22 @@
     position: relative
 
   .row
-    [class*=col-]
-      @media screen and ( max-width: 767px )
-        margin-bottom: 60px !important
-        &:last-child
-          margin-bottom: 0 !important
-      
-      &:nth-child(odd)
-        padding-right: 40px
-        margin-bottom: 80px
-
-        @media screen and ( max-width: 767px )
-          padding-right: 15px
-          margin-bottom: 0px
-
-      &:nth-child(even)
-        padding-left: 40px
-        margin-top: 80px
-
-        @media screen and ( max-width: 767px )
-          padding-left: 15px
-          margin-top: 0px
     &.work-row
       display: none
       &.active
-        display: block
+        display: flex
+
+      [class*=col-]
+        &:last-child
+          .work__item
+            margin-bottom: 0
+          
+        .work__item
+          margin-bottom: 4.8rem
+          @media screen and ( min-width: 576px )
+            margin-bottom: 5.6rem
+          @media screen and ( min-width: 992px )
+            margin-bottom: 3rem
 
   .work__toggle
     position: relative
@@ -92,6 +83,10 @@
     padding-top: 100%
     transition: transform .4s ease-out
     will-change: transform
+
+    @media (hover: hover)
+      &:hover
+        transform: scale3d(.9, .9, .9)
 
     &--coming-soon
       cursor: auto
