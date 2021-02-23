@@ -79,3 +79,78 @@
     onChangeHeader();
   });
 }
+
+//---- TABS TOGGLE ----//
+{
+  const tabs = document.querySelectorAll('a[href^="#tab"]');
+  const tabContents = document.querySelectorAll('.work-row');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', (e) => {
+      e.preventDefault();
+      removeActive();
+      addActive(tab);
+    });
+  });
+
+  const removeActive = () => {
+    tabs.forEach(tab => {
+      tab.classList.remove('active');
+    });
+    tabContents.forEach(content => {
+      content.classList.remove('active');
+    });
+  }
+
+  const addActive = (tab) => {
+    tab.classList.add('active');
+    const tabContent = document.querySelector(`${tab.getAttribute("href")}`);
+    tabContent.classList.add('active');
+  }
+}
+
+
+/* ---- FILTER BUTTON SLIDER ---- */
+function calcActiveLine(activeIndex, button, activeLine) {
+  let offset = 0;
+  for (let j = 0; j < activeIndex; j++) {
+    offset += button[j].offsetWidth;
+  }
+  activeLine.style.transform = `translateX(${offset}px)`;
+  activeLine.style.width = button[activeIndex].offsetWidth + 'px';
+}
+
+const filterBtns = document.querySelectorAll('.js-filter-btn');
+const filterBtnActiveLine = document.querySelector('.js-active-line');
+const filterBtnActive = document.querySelector('.js-filter-btn.active');
+let activeFilterIndex = 0;
+
+if (filterBtns.length != 0) {
+  for (let i = 0; i < filterBtns.length; i++) {
+    filterBtns[i].addEventListener('click', function() {
+      activeFilterIndex = i;
+      calcActiveLine(activeFilterIndex, filterBtns, filterBtnActiveLine);
+    });
+  }
+
+  window.addEventListener('resize', function () {
+    filterBtnActiveLine.style.width = filterBtnActive.offsetWidth + 'px';
+    for (let i = 0; i < filterBtns.length; i++) {
+      calcActiveLine(activeFilterIndex, filterBtns, filterBtnActiveLine);
+    }
+    filterBtns.forEach((btn, index) => {
+      if (btn.classList.contains('filter__btn--active')) {
+        calcActiveLine(index, filterBtns, filterBtnActiveLine);
+      }
+    });
+  });
+
+  window.addEventListener('load', function () {
+    filterBtnActiveLine.style.width = filterBtnActive.offsetWidth + 'px';
+    filterBtns.forEach((btn, index) => {
+      if (btn.classList.contains('filter__btn--active')) {
+        calcActiveLine(index, filterBtns, filterBtnActiveLine);
+      }
+    });
+  });
+}
