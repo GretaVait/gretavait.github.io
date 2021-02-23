@@ -2,9 +2,12 @@ section#work
   .container
     .row
       .col
-        h1.section-title Work
-          span.red-flash
-    .row
+        .work__toggle
+          h1.section-title.work__toggle__switch.work__toggle__switch--active Case Studies
+            span.red-flash
+          h1.section-title.work__toggle__switch Development
+            span.red-flash
+    .row.work-hidden
       .col-md-6
         a(href="https://sos-vaikukaimai.lt/" target="_blank" style="background-color: #F0F8FC").work__item
           .work__item__logo
@@ -29,3 +32,8 @@ section#work
         a(href="https://reactjs-app-expensify.herokuapp.com/" target="_blank" style="background-color: #EDFCF6").work__item
           .work__item__logo
             img(src="assets/img/work/logo/expensify.svg", alt="Expensify logo")
+    .row
+      .col-md-6
+        a(href="https://sos-vaikukaimai.lt/" target="_blank" style="background-color: #F0F8FC").work__item
+          .work__item__logo
+            img(src="assets/img/work/logo/sos-vaiku-kaimai.svg", alt="Sos vaikų kaimai logo")

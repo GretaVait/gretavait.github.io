@@ -4,11 +4,10 @@
     <title>Greta - Web Developer</title><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&amp;display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital@0;1&amp;display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&amp;display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="assets/img/favicon/favicon-27x27.ico" sizes="27x27">
     <link rel="icon" type="image/png" href="assets/img/favicon/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="assets/img/favicon/favicon-16x16.png" sizes="16x16">
@@ -20,7 +19,7 @@
         <div class="container">
           <div class="row">
             <div class="col">
-              <div class="header__container"><span class="logo">Greta /&gt;</span>
+              <div class="header__container"><span class="logo">Greta</span>
                 <div class="menu" role="button">
                   <div class="menu__open">🍔</div>
                   <div class="menu__closed">❌</div>
@@ -50,12 +49,9 @@
         <section id="intro">
           <div class="container">
             <div class="row">
-              <div class="col-lg-9 col-sm-12">
-                <h1 class="section-title">Hi there!<span class="red-flash"></span></h1>
-                <h2 class="h2--bigger">I'm a&nbsp; <em>UX/UI Designer</em> &amp; <em>Web Developer</em> based in Lithuania, Vilnius</h2>
-              </div>
-              <div class="col-12">
-                <h3 class="typewriting"></h3>
+              <div class="col-lg-12 col-sm-12">
+                <h1 class="typewriting"></h1>
+                <h1 class="intro__title">based in Lithuania, Vilnius</h1>
               </div>
             </div>
           </div>
@@ -64,10 +60,13 @@
           <div class="container">
             <div class="row">
               <div class="col">
-                <h1 class="section-title">Work<span class="red-flash"></span></h1>
+                <div class="work__toggle">
+                  <h1 class="section-title work__toggle__switch work__toggle__switch--active">Case Studies<span class="red-flash"></span></h1>
+                  <h1 class="section-title work__toggle__switch">Development<span class="red-flash"></span></h1>
+                </div>
               </div>
             </div>
-            <div class="row">
+            <div class="row work-hidden">
               <div class="col-md-6"><a class="work__item" href="https://sos-vaikukaimai.lt/" target="_blank" style="background-color: #F0F8FC">
                   <div class="work__item__logo"><img src="assets/img/work/logo/sos-vaiku-kaimai.svg" alt="Sos vaikų kaimai logo"></div></a></div>
               <div class="col-md-6"><a class="work__item" href="https://rinvest.lt/" target="_blank" style="background-color: #FCF2FF">
@@ -81,83 +80,9 @@
               <div class="col-md-6"><a class="work__item" href="https://reactjs-app-expensify.herokuapp.com/" target="_blank" style="background-color: #EDFCF6">
                   <div class="work__item__logo"><img src="assets/img/work/logo/expensify.svg" alt="Expensify logo"></div></a></div>
             </div>
-          </div>
-        </section>
-        <section class="section--space" id="about">
-          <div class="container">
             <div class="row">
-              <div class="col-lg-7 col-md-9">
-                <div class="about__description">
-                  <h1 class="section-title">Hi, I'm Greta!<span class="red-flash"></span></h1>
-                  <p>I'm 22 years old Web Developer currently requalifying to UX/UI Design. I've been creating websites for the past year alongside learning and researching about user experience and user interface design. I hope to find a place to put all my skills to work and prove my worth!</p>
-                </div>
-              </div>
-              <div class="w-100"></div>
-            </div>
-            <div class="row justify-content-xl-between row-about">
-              <div class="col-xl-4 col-lg-4 col-md-6">
-                <div class="about__card">
-                  <h2>Web Development</h2>
-                  <ul class="about__card__list">
-                    <li>HTML5, CSS3, Sass</li>
-                    <li>JavaScript, jQuery</li>
-                    <li>React.js, Redux, Router</li>
-                    <li>Gulp, Webpack</li>
-                    <li>Pug.js</li>
-                    <li>Git</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="col-xl-4 col-lg-4 col-md-6">
-                <div class="about__card">
-                  <h2>Web Design</h2>
-                  <ul class="about__card__list">
-                    <li>UX / UI</li>
-                    <li>Wireframing, Prototyping</li>
-                    <li>Design Thinking</li>
-                    <li>Layout, Colors, Typography</li>
-                    <li>Responsive Design</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="col-xl-4 col-lg-4 col-md-6">
-                <div class="about__card">
-                  <h2>Tools</h2>
-                  <ul class="about__card__list">
-                    <li>Adobe Photoshop</li>
-                    <li>Adobe Illustrator</li>
-                    <li>Adobe XD</li>
-                    <li>Figma</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="section--space" id="contact">
-          <div class="container">
-            <div class="row">
-              <div class="col">
-                <h1 class="section-title">Let's keep in touch<span class="red-flash"></span></h1>
-              </div>
-            </div>
-            <div class="row justify-content-md-between">
-              <div class="col-md-2">
-                <div class="contact__links">
-                  <h2>Follow me</h2>
-                  <ul>
-                    <li> <a href="https://github.com/GretaVait" target="_blank"> <img src="assets/img/icons/github.svg" alt="Github Icon"><span>Github</span></a></li>
-                    <li><a href="https://www.linkedin.com/in/gvaitiekunaite/" target="_blank"> <img src="assets/img/icons/linkedin.svg" alt="Linkedin Icon"><span>Linkedin</span></a></li>
-                    <li><a href="https://www.credential.net/283748cf-a8d3-43a3-90cf-810bd4915183" target="_blank"> <img src="assets/img/icons/certificate.svg" alt="Certificate Icon"><span>Certificate</span></a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="col-xl-5 col-md-7">
-                <div id="form">
-                  <h2>Write me</h2>
-                  <p>Say hello! I look forward to hearing from You!</p><a class="form__link" href="mailto:gretavait@gmail.com">👉 <span>gretavait@gmail.com</span> 👈</a>
-                </div>
-              </div>
+              <div class="col-md-6"><a class="work__item" href="https://sos-vaikukaimai.lt/" target="_blank" style="background-color: #F0F8FC">
+                  <div class="work__item__logo"><img src="assets/img/work/logo/sos-vaiku-kaimai.svg" alt="Sos vaikų kaimai logo"></div></a></div>
             </div>
           </div>
         </section>

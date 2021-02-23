@@ -2,36 +2,7 @@
   overflow: hidden
 
   &--primary
-    border: 2px solid $black
-    border-radius: 0px
-    padding: 10px 25px
-    position: relative
-    transition: color .4s ease-in, border .4s ease-in
-    will-change: color, border
-
-    @media (hover: hover)
-      &:hover
-        color: $white
-        border: 2px solid $red
-        &::after
-          transform: skewY(0deg) translate3d(0, 0, 0)
-
-    &:focus
-      box-shadow: none
-
-    &:focus, &:active
-      border: 2px solid $red
-      
-    &::after
-      content: ''
-      background-color: $red
-      width: 100%
-      height: 100%
-      position: absolute
-      bottom: 0
-      left: 0
-      z-index: -1
-      transform: skewY(-10deg) translate3d(0, 120%, 0)
-      transform-origin: bottom center
-      transition: transform .4s $transition-reveal
-      will-change: transform
+    border: 2px solid $yellow
+    font-family: $font-body
+    font-size: 1.2rem
+    width: 20rem
