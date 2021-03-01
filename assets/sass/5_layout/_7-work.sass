@@ -15,15 +15,18 @@
         
         &:nth-child(2)
           .work__item
-            margin-top: 5rem
+            @media screen and ( min-width: 768px )
+              margin-top: 5rem
 
         &:nth-child(odd)
           .work__item
-            margin-top: -5rem
+            @media screen and ( min-width: 768px )
+              margin-top: -5rem
 
         &:first-child
           .work__item
-            margin-top: 0 !important
+            @media screen and ( min-width: 768px )
+              margin-top: 0 !important
           
         .work__item
           margin-bottom: 4.8rem
@@ -37,6 +40,7 @@
     display: flex
     // justify-content: center
     margin-bottom: 2.4rem
+    overflow-x: scroll
     @media screen and ( min-width: 576px )
       margin-bottom: 3.2rem
 
