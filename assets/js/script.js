@@ -69,6 +69,7 @@
         header.classList.remove('open');
         navMobile.classList.remove('open');
         body.classList.remove('disable');
+        menuIcon.classList.remove('menu__open--active');
       }
     }); 
   });
