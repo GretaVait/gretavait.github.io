@@ -35,6 +35,21 @@
           @media screen and ( min-width: 992px )
             margin-bottom: 3rem
   
+    &.work-toggle-row
+      position: relative
+      &::after
+        content: ''
+        background: linear-gradient(90deg, rgba(250,250,250,0) 0%, rgba(250,250,250,0.4) 40%, rgba(250,250,250,0.9) 100%)
+        background-repeat: no-repeat
+        width: 30%
+        height: 100%
+        position: absolute
+        top: 0
+        right: 0
+        pointer-events: none
+        @media screen and ( min-width: 768px )
+          display: none
+ 
   .work__toggle
     position: relative
     display: flex
@@ -44,19 +59,6 @@
       margin-bottom: 3.2rem
     @media screen and ( min-width: 768px )
       overflow-x: auto
-
-    &::after
-      content: ''
-      background: linear-gradient(90deg, rgba(250,250,250,0) 41%, rgba(250,250,250,0.8) 100%)
-      background-repeat: no-repeat
-      width: 50%
-      height: 100%
-      position: absolute
-      top: 0
-      right: -5rem
-      pointer-events: none
-      @media screen and ( min-width: 768px )
-        display: none
 
     &__switch
       font-size: 1.2rem
