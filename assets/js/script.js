@@ -1,6 +1,6 @@
 //---- TYPEWRITING EFFECT ----//
 {
-  const words = ["UX / UI Designer", "Front-End Developer"];
+  const words = ["Web Designer", "Front-End Developer"];
   let wordIndex = 0;
   let timer;
   
