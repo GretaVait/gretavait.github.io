@@ -1,0 +1,44 @@
+#contact
+
+  .contact__list
+    display: flex
+    flex-direction: column
+    margin-bottom: 3.2rem
+
+    li
+      &:last-child
+        margin-bottom: 0px
+
+      a
+        display: inline-block
+        padding-bottom: 1.6rem
+        @media (hover: hover)
+          &:hover
+              span
+                &::after
+                  transform: scale3d(1, 1, 1)
+                  transform-origin: center left
+        span
+          position: relative
+          &::after
+            content: ''
+            position: absolute
+            top: 50%
+            left: 0
+            transform: translate(0, -50%)
+            width: 100%
+            height: 1px
+            background-color: $black
+            transform: scale3d(0, 1, 1)
+            transform-origin: center right
+            transition: transform 0.5s $transition-reveal
+        .contact__icon
+          display: inline-block
+          width: 5.6rem
+          img
+            height: 19.2px
+            margin-right: 15px
+
+  .contact__content
+    margin-bottom: 2.4rem
+      

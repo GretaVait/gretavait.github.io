@@ -1,0 +1,22 @@
+#page-container
+  overflow: hidden
+
+input, textarea, button
+  border-top: none
+  border-left: none
+  border-right: none
+  border-bottom: none
+
+body
+  position: relative
+  background-color: $white
+  &.disable
+    overflow: hidden
+
+section
+  &:not(#intro)
+    padding-top: 8rem
+    @media screen and ( min-width: 576px )
+      padding-top: 10.4rem
+    @media screen and ( min-width: 992px )
+      padding-top: 16rem

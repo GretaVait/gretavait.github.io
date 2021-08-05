@@ -1,0 +1,21 @@
+@keyframes blinking-caret
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+
+@keyframes reveal
+  0%
+    transform: scale3d(0, 1, 1)
+    transform-origin: center left
+  50%
+    transform-origin: center left
+  51%
+    transform: scale3d(1, 1, 1)
+    transform-origin: right center
+  100%
+    transform: scale3d(0, 1, 1)
+    transform-origin: right center
+    
+    
+    
